@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  src: url('./assets/fonts/jet_brains_mono.ttf');
+  font-weight: normal;
+}
+
+@font-face {
+  font-family: 'JetBrains Mono';
+  font-style: italic;
+  src: url('./assets/fonts/jet_brains_mono_italic.ttf');
+}
+
+@layer utilities {
+  .dark-bg-gradient {
+    background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
+  }
+}
