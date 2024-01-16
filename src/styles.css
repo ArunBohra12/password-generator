@@ -14,6 +14,12 @@
   src: url('./assets/fonts/jet_brains_mono_italic.ttf');
 }
 
+@layer base {
+  body {
+    @apply dark-bg-gradient text-almost-white min-h-screen;
+  }
+}
+
 @layer utilities {
   .dark-bg-gradient {
     background: linear-gradient(180deg, #14131b 0%, #08070b 100%);
