@@ -15,8 +15,12 @@
 }
 
 @layer base {
+  html {
+    @apply min-h-screen;
+  }
+
   body {
-    @apply dark-bg-gradient min-h-screen text-almost-white;
+    @apply dark-bg-gradient text-almost-white;
   }
 }
 

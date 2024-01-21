@@ -6,6 +6,7 @@ import {
   PasswordConfigType,
   PasswordGeneratorService,
 } from '../shared/service/password-generator/password-generator.service';
+import { PasswordStrengthService } from '../shared/service/password-strength/password-strength.service';
 
 type PasswordConfigCheckboxesType = {
   name: keyof PasswordConfigType;
@@ -19,7 +20,10 @@ type PasswordConfigCheckboxesType = {
   templateUrl: './password-generation-config.component.html',
 })
 export class PasswordGenerationConfigComponent {
-  constructor(public passwordGenerator: PasswordGeneratorService) {}
+  constructor(
+    public passwordGenerator: PasswordGeneratorService,
+    public passwordStrength: PasswordStrengthService,
+  ) {}
 
   public length = this.passwordGenerator.passwordGeneratorConfig.length;
 
@@ -59,5 +63,9 @@ export class PasswordGenerationConfigComponent {
       key: config.key,
       value: config.value,
     });
+
+    this.passwordStrength.updatePasswordStrengthLevel(
+      this.passwordGenerator.passwordGeneratorConfig,
+    );
   }
 }

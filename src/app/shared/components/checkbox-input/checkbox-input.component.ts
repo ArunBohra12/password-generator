@@ -10,7 +10,7 @@ import { Component, EventEmitter, Input, Output } from '@angular/core';
 export class CheckboxInputComponent {
   @Input() label = '';
   @Input() id = '';
-  @Output() change = new EventEmitter<{ key: string; value: boolean }>();
+  @Output() changeEvent = new EventEmitter<{ key: string; value: boolean }>();
 
   private isChecked = false;
 
@@ -20,6 +20,6 @@ export class CheckboxInputComponent {
 
   toggleIsChecked() {
     this.isChecked = !this.isChecked;
-    this.change.emit({ key: this.id, value: this.checked });
+    this.changeEvent.emit({ key: this.id, value: this.checked });
   }
 }
