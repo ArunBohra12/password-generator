@@ -1,9 +1,9 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PasswordView } from './password-view/password-view.component';
-import { PasswordGenerationConfigComponent } from './password-generation-config/password-generation-config.component';
+import { PasswordView } from './features/password-view/password-view.component';
+import { PasswordGenerationConfigComponent } from './features/password-generation-config/password-generation-config.component';
 import { PasswordGeneratorService } from './shared/service/password-generator/password-generator.service';
-import { PasswordStrengthCheck } from './password-strength-check/password-strength-check.component';
+import { PasswordStrengthCheck } from './features/password-strength-check/password-strength-check.component';
 
 @Component({
   selector: 'app-root',

@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { PasswordGeneratorService } from '../shared/service/password-generator/password-generator.service';
+import { PasswordGeneratorService } from '../../shared/service/password-generator/password-generator.service';
 
 @Component({
   selector: 'app-password-view',

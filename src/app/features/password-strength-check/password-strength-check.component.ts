@@ -1,7 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { PasswordGeneratorService } from '../shared/service/password-generator/password-generator.service';
-import { PasswordStrengthService } from '../shared/service/password-strength/password-strength.service';
+import { PasswordGeneratorService } from '../../shared/service/password-generator/password-generator.service';
+import { PasswordStrengthService } from '../../shared/service/password-strength/password-strength.service';
 
 export type PasswordStrengthLevel = 'too-weak' | 'weak' | 'medium' | 'strong';
 

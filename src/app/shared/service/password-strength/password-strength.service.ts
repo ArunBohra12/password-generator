@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { PasswordConfigType } from '../password-generator/password-generator.service';
-import { PasswordStrengthLevel } from '../../../password-strength-check/password-strength-check.component';
+import { PasswordStrengthLevel } from '../../../features/password-strength-check/password-strength-check.component';
 
 @Injectable({
   providedIn: 'root',

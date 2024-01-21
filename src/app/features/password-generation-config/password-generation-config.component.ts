@@ -1,12 +1,12 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
-import { CheckboxInputComponent } from '../shared/components/checkbox-input/checkbox-input.component';
-import { RangeInputComponent } from '../shared/components/range-input/range-input.component';
+import { CheckboxInputComponent } from '../../shared/components/checkbox-input/checkbox-input.component';
+import { RangeInputComponent } from '../../shared/components/range-input/range-input.component';
 import {
   PasswordConfigType,
   PasswordGeneratorService,
-} from '../shared/service/password-generator/password-generator.service';
-import { PasswordStrengthService } from '../shared/service/password-strength/password-strength.service';
+} from '../../shared/service/password-generator/password-generator.service';
+import { PasswordStrengthService } from '../../shared/service/password-strength/password-strength.service';
 
 type PasswordConfigCheckboxesType = {
   name: keyof PasswordConfigType;
