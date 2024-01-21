@@ -16,7 +16,7 @@
 
 @layer base {
   body {
-    @apply dark-bg-gradient text-almost-white min-h-screen;
+    @apply dark-bg-gradient min-h-screen text-almost-white;
   }
 }
 

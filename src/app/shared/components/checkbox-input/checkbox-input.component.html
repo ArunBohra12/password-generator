@@ -1,0 +1,15 @@
+<label for="{{ id }}" class="flex cursor-pointer gap-6">
+  <input
+    type="checkbox"
+    name="{{ id }}"
+    id="{{ id }}"
+    (change)="toggleIsChecked()"
+    hidden />
+
+  <div
+    class="flex h-5 w-5 items-center justify-center border-2 transition-colors duration-300"
+    [ngClass]="checked ? 'border-green bg-green' : 'border-almost-white'">
+    <img *ngIf="checked" src="../../../assets/images/icon-check.svg" alt="#" />
+  </div>
+  <span>{{ label }}</span>
+</label>

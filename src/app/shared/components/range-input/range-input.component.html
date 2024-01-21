@@ -1,0 +1,14 @@
+<div class="relative h-2">
+  <div class="absolute h-2 w-full bg-almost-black">
+    <div
+      class="h-full bg-green"
+      [ngStyle]="{ 'width.%': selectedPercentage }"></div>
+  </div>
+  <input
+    type="range"
+    [min]="minValue"
+    [max]="maxValue"
+    [value]="value"
+    (input)="setValue($event)"
+    class="range-input w-full" />
+</div>
