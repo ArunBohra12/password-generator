@@ -9,6 +9,23 @@
       <app-password-view />
     </div>
 
-    <app-password-generation-config />
+    <div class="bg-dark-grey p-4 sm:p-8 sm:pt-6">
+      <app-password-generation-config />
+
+      <button
+        type="button"
+        class="group flex w-full items-center justify-center gap-6 border-2 border-green bg-green py-[18px] text-base font-bold !leading-[normal] text-dark-grey transition-colors duration-300 hover:bg-transparent hover:text-green sm:py-5 sm:text-lg"
+        (click)="generatePassword()">
+        <span>Generate</span>
+        <span>
+          <svg width="12" height="12" xmlns="http://www.w3.org/2000/svg">
+            <path
+              class="group-hover:fill-current"
+              fill="#24232C"
+              d="m5.106 12 6-6-6-6-1.265 1.265 3.841 3.84H.001v1.79h7.681l-3.841 3.84z" />
+          </svg>
+        </span>
+      </button>
+    </div>
   </div>
 </div>

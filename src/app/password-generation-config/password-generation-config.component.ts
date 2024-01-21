@@ -21,7 +21,7 @@ type PasswordConfigCheckboxesType = {
 export class PasswordGenerationConfigComponent {
   constructor(public passwordGenerator: PasswordGeneratorService) {}
 
-  private length = 10;
+  public length = this.passwordGenerator.passwordGeneratorConfig.length;
 
   public passwordConfigCheckboxes: PasswordConfigCheckboxesType = [
     {
@@ -41,14 +41,6 @@ export class PasswordGenerationConfigComponent {
       title: 'Include Symbols',
     },
   ];
-
-  get passwordLength() {
-    return this.length;
-  }
-
-  updatePasswordLength(val: number) {
-    this.length = val;
-  }
 
   updatePasswordConfigFromCheckboxes(value: { key: string; value: boolean }) {
     const key = value.key as keyof PasswordConfigType;

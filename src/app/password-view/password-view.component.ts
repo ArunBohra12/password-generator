@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { PasswordGeneratorService } from '../shared/service/password-generator/password-generator.service';
 
 @Component({
   selector: 'app-password-view',
@@ -8,7 +9,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: './password-view.component.html',
 })
 export class PasswordView {
-  @Input() password = '';
+  constructor(public passwordGeneration: PasswordGeneratorService) {}
 
   public showCopiedText = false;
 
@@ -21,7 +22,7 @@ export class PasswordView {
   }
 
   public copyPassword() {
-    navigator.clipboard.writeText(this.password);
+    navigator.clipboard.writeText(this.passwordGeneration.password);
     this.toggleShowCopiedText();
   }
 }

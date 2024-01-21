@@ -18,6 +18,8 @@ export type PasswordConfigType = {
   providedIn: 'root',
 })
 export class PasswordGeneratorService {
+  private generatedPassword = '';
+
   private passwordConfig: PasswordConfigType = {
     length: 10,
     uppercase: false,
@@ -25,6 +27,10 @@ export class PasswordGeneratorService {
     numbers: false,
     symbols: false,
   };
+
+  get password() {
+    return this.generatedPassword;
+  }
 
   get passwordGeneratorConfig() {
     return this.passwordConfig;
@@ -60,6 +66,16 @@ export class PasswordGeneratorService {
     const passwordConfig = this.passwordConfig;
     let password = '';
 
+    if (
+      !passwordConfig.uppercase &&
+      !passwordConfig.lowercase &&
+      !passwordConfig.symbols &&
+      !passwordConfig.symbols
+    ) {
+      this.generatedPassword = '';
+      return;
+    }
+
     while (password.length <= passwordConfig.length) {
       if (
         passwordConfig.uppercase &&
@@ -84,6 +100,6 @@ export class PasswordGeneratorService {
       }
     }
 
-    return this.randomizeString(password);
+    this.generatedPassword = this.randomizeString(password);
   }
 }
