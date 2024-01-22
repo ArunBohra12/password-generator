@@ -1,4 +1,4 @@
-<div class="relative h-2">
+<label for="{{ id }}" class="relative h-2">
   <div class="absolute h-2 w-full bg-almost-black">
     <div
       class="h-full bg-green"
@@ -10,5 +10,6 @@
     [max]="maxValue"
     [value]="value"
     (input)="setValue($event)"
+    id="{{ id }}"
     class="range-input w-full" />
-</div>
+</label>

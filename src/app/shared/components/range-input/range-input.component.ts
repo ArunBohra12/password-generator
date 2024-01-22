@@ -12,6 +12,7 @@ export class RangeInputComponent implements OnInit {
   @Input() inputValue: number = 10;
   @Input() minValue: number = 4;
   @Input() maxValue: number = 20;
+  @Input() id = '';
   @Output() selectedLength = new EventEmitter<number>();
 
   public selectedPercentage = 0;
