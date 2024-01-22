@@ -1,4 +1,4 @@
-<label for="{{ id }}" class="relative h-2">
+<div class="relative h-2">
   <div class="absolute h-2 w-full bg-almost-black">
     <div
       class="h-full bg-green"
@@ -11,5 +11,6 @@
     [value]="value"
     (input)="setValue($event)"
     id="{{ id }}"
+    placeholder="Range input"
     class="range-input w-full" />
-</label>
+</div>
