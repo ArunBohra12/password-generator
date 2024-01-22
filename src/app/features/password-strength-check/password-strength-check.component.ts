@@ -3,7 +3,12 @@ import { Component } from '@angular/core';
 import { PasswordGeneratorService } from '../../shared/service/password-generator/password-generator.service';
 import { PasswordStrengthService } from '../../shared/service/password-strength/password-strength.service';
 
-export type PasswordStrengthLevel = 'too-weak' | 'weak' | 'medium' | 'strong';
+export type PasswordStrengthLevel =
+  | 'none'
+  | 'too-weak'
+  | 'weak'
+  | 'medium'
+  | 'strong';
 
 const PASSWORD_STRENGTH_CONSTANTS: {
   [key in PasswordStrengthLevel]: {
@@ -12,6 +17,11 @@ const PASSWORD_STRENGTH_CONSTANTS: {
     level: number;
   };
 } = {
+  none: {
+    class: '',
+    text: '',
+    level: 0,
+  },
   'too-weak': {
     class: 'bg-red border-red',
     text: 'TOO WEAK!',

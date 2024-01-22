@@ -4,6 +4,7 @@ import { PasswordView } from './features/password-view/password-view.component';
 import { PasswordGenerationConfigComponent } from './features/password-generation-config/password-generation-config.component';
 import { PasswordGeneratorService } from './shared/service/password-generator/password-generator.service';
 import { PasswordStrengthCheck } from './features/password-strength-check/password-strength-check.component';
+import { PasswordStrengthService } from './shared/service/password-strength/password-strength.service';
 
 @Component({
   selector: 'app-root',
@@ -17,9 +18,16 @@ import { PasswordStrengthCheck } from './features/password-strength-check/passwo
   templateUrl: './app.component.html',
 })
 export class AppComponent {
-  constructor(public passwordGenerator: PasswordGeneratorService) {}
+  constructor(
+    public passwordGenerator: PasswordGeneratorService,
+    public passwordStrength: PasswordStrengthService,
+  ) {}
 
   generatePassword() {
     this.passwordGenerator.generatePassword();
+
+    this.passwordStrength.updatePasswordStrengthLevel(
+      this.passwordGenerator.passwordGeneratorConfig,
+    );
   }
 }

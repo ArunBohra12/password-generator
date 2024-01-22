@@ -6,7 +6,7 @@ import { PasswordStrengthLevel } from '../../../features/password-strength-check
   providedIn: 'root',
 })
 export class PasswordStrengthService {
-  private passwordStrengthLevel: PasswordStrengthLevel = 'medium';
+  private passwordStrengthLevel: PasswordStrengthLevel = 'none';
 
   get passwordStrength() {
     return this.passwordStrengthLevel;

@@ -21,7 +21,7 @@ export class PasswordGeneratorService {
   private generatedPassword = '';
 
   private passwordConfig: PasswordConfigType = {
-    length: 10,
+    length: 0,
     uppercase: false,
     lowercase: false,
     numbers: false,
